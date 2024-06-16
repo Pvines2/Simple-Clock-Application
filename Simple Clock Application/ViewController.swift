@@ -100,6 +100,7 @@ class ViewController: UIViewController {
         }
     }
     
+    
     func formatTime(_ interval: TimeInterval) -> String {
         let hours = Int(interval) / 3600
         let minutes = Int(interval) / 60 % 60
@@ -131,7 +132,7 @@ class ViewController: UIViewController {
             countdownDuration = 0
             isMusicPlaying = false
             countdownTimer?.invalidate()
-            countdownTimer = nil 
+            countdownTimer = nil
         }
     
     
