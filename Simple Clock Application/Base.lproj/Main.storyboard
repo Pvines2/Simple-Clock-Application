@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simple_Clock_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pm_image" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-eB-T05">
+                                <rect key="frame" x="0.0" y="46.666666666666686" width="393" height="759"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed, 28 Dec 2022 14:59:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK1-AW-Tkh" userLabel="clock">
+                                <rect key="frame" x="72" y="168" width="249" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="sfW-Tf-sGu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="60" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbI-Wm-wQ7" userLabel="datePicker">
+                                <rect key="frame" x="36.666666666666657" y="318" width="320" height="216"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining: 00:10:15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkX-AO-uKv" userLabel="time remaining">
+                                <rect key="frame" x="98.666666666666671" y="763" width="195.66666666666663" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQA-Iq-Vdc">
+                                <rect key="frame" x="67" y="717" width="259" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start Timer / Stop Music">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startStopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gxb-cb-Dtg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6hf-eB-T05" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1GQ-Gv-bfl"/>
+                            <constraint firstItem="CK1-AW-Tkh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Ff-ql-MAK"/>
+                            <constraint firstItem="gkX-AO-uKv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98.666666666666686" id="3Tg-Ep-K40"/>
+                            <constraint firstItem="PbI-Wm-wQ7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CBD-Rr-jsb"/>
+                            <constraint firstItem="6hf-eB-T05" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="CmH-tB-e66"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lQA-Iq-Vdc" secondAttribute="trailing" constant="67" id="Mgu-71-UhJ"/>
+                            <constraint firstItem="gkX-AO-uKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PvB-6C-Ls5"/>
+                            <constraint firstItem="PbI-Wm-wQ7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Utq-87-R70"/>
+                            <constraint firstItem="6hf-eB-T05" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VUJ-rQ-95X"/>
+                            <constraint firstItem="gkX-AO-uKv" firstAttribute="top" secondItem="lQA-Iq-Vdc" secondAttribute="bottom" constant="8" id="btI-ko-td7"/>
+                            <constraint firstItem="PbI-Wm-wQ7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gzX-zU-tnK"/>
+                            <constraint firstItem="6hf-eB-T05" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="lFV-SW-S2a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gkX-AO-uKv" secondAttribute="bottom" constant="34" id="mxB-q1-Tlh"/>
+                            <constraint firstItem="lQA-Iq-Vdc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nHZ-Gk-uMi"/>
+                            <constraint firstItem="PbI-Wm-wQ7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rRe-v9-sTx"/>
+                            <constraint firstItem="lQA-Iq-Vdc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sb0-Yd-6Yb"/>
+                            <constraint firstItem="gkX-AO-uKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="scS-2f-Tsd"/>
+                            <constraint firstItem="CK1-AW-Tkh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="109" id="zGF-54-0Xe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="6hf-eB-T05" id="uZk-XE-GKs"/>
+                        <outlet property="clockLabel" destination="CK1-AW-Tkh" id="aJr-xq-pGd"/>
+                        <outlet property="datePicker" destination="PbI-Wm-wQ7" id="HhR-aG-jHM"/>
+                        <outlet property="startStopButton" destination="lQA-Iq-Vdc" id="J8J-sJ-sl1"/>
+                        <outlet property="timerLabel" destination="gkX-AO-uKv" id="CZq-yy-2h2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pm_image" width="200" height="128.66667175292969"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
