@@ -86,7 +86,7 @@ class ViewController: UIViewController {
     func startTimer() {
         countdownDuration = datePicker.countDownDuration
         countdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-        startStopButton.setTitle("Stop Music", for: .normal)
+        startStopButton.setTitle("Stop", for: .normal)
     }
     
     @objc func updateTimer() {
@@ -115,6 +115,7 @@ class ViewController: UIViewController {
                     player = try AVAudioPlayer(contentsOf: url)
                     player?.play()
                     isMusicPlaying = true
+                    startStopButton.setTitle("Stop Music", for: .normal) 
                     print("Music started playing")
                 } catch {
                     print("Error playing music: \(error.localizedDescription)")
