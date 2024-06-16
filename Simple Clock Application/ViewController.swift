@@ -35,6 +35,16 @@ class ViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateClock), userInfo: nil, repeats: true)
         
+        
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+                NSLayoutConstraint.activate([
+                    backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
+                    backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                    backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                    backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+                ])
+                backgroundImageView.contentMode = .scaleAspectFill
+        
             
         
         // Set initial background image
@@ -67,7 +77,7 @@ class ViewController: UIViewController {
             backgroundImage = UIImage(named: "pm_image")
         }
         if let bgImage = backgroundImage {
-            self.view.backgroundColor = UIColor(patternImage: bgImage)
+            backgroundImageView.image = bgImage
         } else {
             print("Background image not found!")
         }
@@ -115,7 +125,7 @@ class ViewController: UIViewController {
                     player = try AVAudioPlayer(contentsOf: url)
                     player?.play()
                     isMusicPlaying = true
-                    startStopButton.setTitle("Stop Music", for: .normal) 
+                    startStopButton.setTitle("Stop Music", for: .normal)
                     print("Music started playing")
                 } catch {
                     print("Error playing music: \(error.localizedDescription)")

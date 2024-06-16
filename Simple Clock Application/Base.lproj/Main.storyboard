@@ -16,8 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pm_image" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-eB-T05">
-                                <rect key="frame" x="0.0" y="46.666666666666686" width="430" height="839"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-eB-T05">
+                                <rect key="frame" x="-9" y="0.0" width="447" height="932"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6hf-eB-T05" secondAttribute="height" multiplier="430:839" constant="-30.663885578069198" id="kTM-ai-vax"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed, 28 Dec 2022 14:59:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK1-AW-Tkh" userLabel="clock">
                                 <rect key="frame" x="90.666666666666686" y="168" width="249" height="24"/>
@@ -60,14 +63,14 @@
                             <constraint firstItem="CK1-AW-Tkh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Ff-ql-MAK"/>
                             <constraint firstItem="gkX-AO-uKv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98.666666666666686" id="3Tg-Ep-K40"/>
                             <constraint firstItem="PbI-Wm-wQ7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CBD-Rr-jsb"/>
-                            <constraint firstItem="6hf-eB-T05" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="CmH-tB-e66"/>
+                            <constraint firstItem="6hf-eB-T05" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" constant="93" id="CmH-tB-e66"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lQA-Iq-Vdc" secondAttribute="trailing" constant="67" id="Mgu-71-UhJ"/>
                             <constraint firstItem="gkX-AO-uKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PvB-6C-Ls5"/>
                             <constraint firstItem="PbI-Wm-wQ7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Utq-87-R70"/>
                             <constraint firstItem="6hf-eB-T05" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VUJ-rQ-95X"/>
                             <constraint firstItem="gkX-AO-uKv" firstAttribute="top" secondItem="lQA-Iq-Vdc" secondAttribute="bottom" constant="8" id="btI-ko-td7"/>
                             <constraint firstItem="PbI-Wm-wQ7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gzX-zU-tnK"/>
-                            <constraint firstItem="6hf-eB-T05" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="lFV-SW-S2a"/>
+                            <constraint firstItem="6hf-eB-T05" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" constant="17" id="lFV-SW-S2a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gkX-AO-uKv" secondAttribute="bottom" constant="34" id="mxB-q1-Tlh"/>
                             <constraint firstItem="lQA-Iq-Vdc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nHZ-Gk-uMi"/>
                             <constraint firstItem="PbI-Wm-wQ7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rRe-v9-sTx"/>
@@ -86,11 +89,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="129.76744186046511" y="-27.682403433476395"/>
         </scene>
     </scenes>
     <resources>
-        <image name="pm_image" width="200" height="128.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
